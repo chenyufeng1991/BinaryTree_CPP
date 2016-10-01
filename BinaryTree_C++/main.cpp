@@ -17,14 +17,14 @@ typedef struct BTNode{
 }BiTNode;
 
 //先序创建二叉树
-int CreateBiTree(BiTNode **T)
+void CreateBiTree(BiTNode **T)
 {
     int ch;
     cin >> ch;
     if (ch == -1)
     {
         *T = NULL;
-        return 0;
+        return;
     }
     else
     {
@@ -32,7 +32,7 @@ int CreateBiTree(BiTNode **T)
         if (T == NULL)
         {
             cout << "failed" << endl;
-            return 0;
+            return;
         }
         else
         {
@@ -44,7 +44,7 @@ int CreateBiTree(BiTNode **T)
         }
     }
 
-    return 1;
+    return;
 }
 
 //先序遍历二叉树

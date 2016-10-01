@@ -29,19 +29,11 @@ void CreateBiTree(BiTNode **T)
     else
     {
         *T = new BiTNode;
-        if (T == NULL)
-        {
-            cout << "failed" << endl;
-            return;
-        }
-        else
-        {
-            (*T)->data = ch;
-            cout << "输入" << ch << "的左子节点:";
-            CreateBiTree(&((*T)->lChild));
-            cout << "输入" << ch << "的右子节点:";
-            CreateBiTree((&(*T)->rChild));
-        }
+        (*T)->data = ch;
+        cout << "输入" << ch << "的左子节点:";
+        CreateBiTree(&((*T)->lChild));
+        cout << "输入" << ch << "的右子节点:";
+        CreateBiTree((&(*T)->rChild));
     }
 
     return;
